@@ -14,8 +14,9 @@ const message_elements = {
     tools: ['license to kill', 'new badass Astonmartin', 'M-16 on your back'], 
     end_of_the_message: ['God save the Queen', 'Good bless you', 'Good luck', 'We will take care of your family']
 }
-let random_array = [];
+let random_object = Object.create(message_elements);
 for (let element in message_elements) {
     let rand_num = random_number(message_elements[element].length); 
-    random_array.push(message_elements[element][rand_num]);
+    random_object[element] = message_elements[element][rand_num];
+    
 }
